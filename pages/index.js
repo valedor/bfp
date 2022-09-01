@@ -95,7 +95,7 @@ export default function Home() {
         <header className="bg-white shadow"></header>
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            {/* Replace with your content */}
+            {/* All the modifications about the main content goes here */}
             <div class="flex">
               <div class="flex-1 ">01
               </div>
@@ -103,7 +103,7 @@ export default function Home() {
               <div class="flex-1 ">02
               </div>
             </div>
-            {/* /End replace */}
+            {/* /End main content */}
           </div>
         </main>
       </div>
