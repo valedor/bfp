@@ -22,7 +22,7 @@ export default function Home() {
                     <div className="flex-shrink-0">
                       <img
                         className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
+                        src="public/logo.png"
                         alt="Workflow"
                       />
                     </div>
@@ -124,7 +124,8 @@ export default function Home() {
                 <span className="sr-only">Open main menu</span>
               </div>
               
-              <div class="flex-1 ">02
+              <div class="flex-1 ">
+                
               </div>
             </div>
             {/* /End main content */}
