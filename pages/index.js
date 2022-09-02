@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
+
 const navigation = [{ name: "Health Overview", href: "#", current: true }];
 
 function classNames(...classes) {
@@ -12,7 +13,7 @@ export default function Home() {
   return (
     <>
       <div className="min-h-full">
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className="bg-[#8667f0]">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -26,22 +27,8 @@ export default function Home() {
                       />
                     </div>
                     <div className="hidden md:block">
-                      <div className="ml-10 flex items-baseline space-x-4">
-                        {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className={classNames(
-                              item.current
-                                ? "bg-gray-900 text-white"
-                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                              "px-3 py-2 rounded-md text-sm font-medium"
-                            )}
-                            aria-current={item.current ? "page" : undefined}
-                          >
-                            {item.name}
-                          </a>
-                        ))}
+                      <div className="ml-10 flex items-baseline space-x-5 tracking-normal">
+                        <span>Health Overview</span>
                       </div>
                     </div>
                   </div>
@@ -69,23 +56,8 @@ export default function Home() {
               </div>
 
               <Disclosure.Panel className="md:hidden">
-                <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-                  {navigation.map((item) => (
-                    <Disclosure.Button
-                      key={item.name}
-                      as="a"
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "block px-3 py-2 rounded-md text-base font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </Disclosure.Button>
-                  ))}
+                <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3 tracking-normal">
+                  <span>Health Overview</span>
                 </div>
               </Disclosure.Panel>
             </>
@@ -97,7 +69,59 @@ export default function Home() {
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
             {/* All the modifications about the main content goes here */}
             <div class="flex">
-              <div class="flex-1 ">01
+              <div class="flex-1 ">
+                <h1 className="text-6xl mt-12">Caclculadora de Grasa Corporal</h1>
+                <br></br>
+                <p className="text-gray-400 text-lg">
+                  El método de la Marina de Estados Unidos (US Navy Method) ofrece una manera sencilla  de calcular un aproximado
+                  del porcentaje del tejido adiposo en el cuerpo de una persona.
+                </p>
+                <br></br>
+
+                <p className="text-gray-400 text-lg">
+                  Los valores requeridos por la fórmula son los siguientes:
+                </p>
+                <br></br>
+
+                <h1 className="text-xl">
+                  Género
+                </h1>
+                <br></br>
+
+                <input id="radio-hombre" type="radio" name="radio-genero"/>
+                <label className="ml-2 " for="radio-hombre">Hombre</label>
+                
+                <input id="radio-mujer" className="ml-5" type="radio" name="radio-genero"/>
+                <label className="ml-2" for="radio-mujer">Mujer</label>
+                <br></br>
+
+                <h1 className="text-xl mt-10">
+                  Altura (cm)
+                </h1>
+                <input id="input-altura" type="number" className="rounded-full bg-black mt-3 w-full" placeholder="Escribe tu altura" />
+
+                <h1 className="text-xl mt-10">
+                  Peso (kg)
+                </h1>
+                <input id="input-peso" type="number" className="rounded-full bg-black mt-3 w-full" placeholder="Escribe tu peso" />
+
+                <h1 className="text-xl mt-10">
+                  Cintura (cm)
+                </h1>
+                <input id="input-cintura" type="number" className="rounded-full bg-black mt-3 w-full" placeholder="Medida de tu cintura" />
+
+                <h1 className="text-xl mt-10">
+                  Cuello (cm)
+                </h1>
+                <input id="input-cuello" type="number" className="rounded-full bg-black mt-3 w-full" placeholder="Medida de tu cuello" />
+
+                <div className="mt-10">
+                  <button type="button" className="rounded-full bg-[#8667f0] px-5 py-2.5 hover:bg-[#8651f0] text-center mr-2 mb-2">Calcular</button>
+                  <button type="button" className="rounded-full ml-5 px-5 py-2.5 hover:ring-1 hover:ring-bg-[#8667f0] text-center mr-2 mb-2">Limpiar</button>
+                </div>
+
+
+                <span className="sr-only">Open main menu</span>
               </div>
               
               <div class="flex-1 ">02
